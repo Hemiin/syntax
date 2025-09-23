@@ -8,21 +8,23 @@ fun main(){
     val result = Sorteeer(input)
 
     println("Результат: ")
-    for (i in ind until input.length)
+    for (i in ind until input.length) {
         println(result[i])
         ind++
-
+    }
 }
 
-fun Sorteeer(input: String): MutableList<String> {
+fun Sorteeer(input: String): List<String> {
 
+    val CharCount = mutableMapOf<Char, Int>()
+    for (char in input){
+        CharCount[char] = CharCount.getOrDefault(char, 0) + 1
+    }
+    val sortedChars = CharCount.toList().sortedBy { it.first }
     val result = mutableListOf<String>()
-
-    var count = 1
-
-    for (i in count until input.length)
-
-
+    for ((char, count) in sortedChars) {
+        result.add("$char - $count")
+    }
 
     return result
 }
