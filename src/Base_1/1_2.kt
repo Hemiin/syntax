@@ -8,10 +8,8 @@ fun main(){
     val result = Sorteeer(input)
 
     println("Результат: ")
-    for (i in ind until input.length) {
-        println(result[i])
-        ind++
-    }
+    for (i in result)
+        println(i)
 }
 
 fun Sorteeer(input: String): List<String> {
