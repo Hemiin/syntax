@@ -3,8 +3,6 @@ package Base_1
 fun main(){
     println("Введите строку: ")
     val input: String = readln()
-    var ind = 0
-
     val result = Sorteeer(input)
 
     println("Результат: ")
